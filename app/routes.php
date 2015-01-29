@@ -71,6 +71,12 @@ Route::get('/rolldice/{guess}', function($guess) {
 
 	$randomNumb = rand(1, 6);
 
+	if ($randomNumb == $guess) {
+		echo "You guessed correctly! :D";
+	} else {
+		echo "You guessed wrong. :(";
+	}
+
 	return View::make('roll-dice')->with('randomNumb', $randomNumb)->with('guess', $guess);
 
 });
