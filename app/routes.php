@@ -13,59 +13,15 @@
 
 Route::get('/', function()
 {
-	return 'Hello Codeup';
-	// return View::make('hello');
-});
-
-Route::get('parks', function() {
-	return View::make('parks');
-});
-
-Route::post('parks.html', function() {
-	return 'Which will you see???????';
-});
-
-Route::get('say-hello/{name}', function($name) {
-		return View::make('sayhello');
-	
-	
-});
-
-Route::get('say-hello/{name}/{age}', function($name, $age) {
-	return "Hello $name! I hear you're $age years old.";
-});
-
-Route::get('resume', function() {
-	return "My resume";
-});
-
-Route::get('portfolio', function() {
-	return "My portfolio";
-});
-
-// NOTES:
-
-Route::get('say-hello/{urlName}', function($argName) {
-	return View::make('sayhello')->with('viewName', $argName)->with('age', 0);
+	return View::make('hello');
 });
 
 
-Route::get('say-hello/{urlName}', function($argName) {
-	$data = array(
-		'viewName' => $argName,
-		'age'      => 0
-	);
+Route::get('resume', 'HomeController@showResume');
 
-	// All three Views below are the same!
+Route::get('portfolio', 'HomeController@showPortfolio');
 
-	return View::make('sayhello', $data);
-	return View::make('sayhello')->with($data);
-	return View::make('sayhello')->with('viewName', $argName)->with('age', 0);
-});
-
-
-
-
+Route::resource('posts', 'PostsController');
 
 Route::get('/rolldice/{guess}', function($guess) {
 
@@ -80,6 +36,9 @@ Route::get('/rolldice/{guess}', function($guess) {
 	return View::make('roll-dice')->with('randomNumb', $randomNumb)->with('guess', $guess);
 
 });
+
+
+
 
 
 
