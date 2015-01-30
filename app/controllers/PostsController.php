@@ -9,7 +9,7 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		return "Navigation to http://blog.dev/posts/ Should show an index of all posts";
 	}
 
 
@@ -20,7 +20,7 @@ class PostsController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return "Navigation to http://blog.dev/posts/create Should show a form for creating a post";
 	}
 
 
@@ -43,7 +43,7 @@ class PostsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		return "Navigation to http://blog.dev/posts/{post} Should show a specific post";
 	}
 
 
@@ -55,7 +55,7 @@ class PostsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		return "Navigation to http://blog.dev/posts/{post}/edit Should show a form for editing a specific post";
 	}
 
 
