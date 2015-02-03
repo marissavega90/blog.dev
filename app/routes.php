@@ -37,7 +37,12 @@ Route::get('/rolldice/{guess}', function($guess) {
 
 });
 
+Route::get('/whackamole', function() 
+{
+	return View::make('whackamole');
+})
 
+Route::get('create')
 
 
 
