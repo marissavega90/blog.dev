@@ -4,32 +4,103 @@
 
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
 
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <style>
+  #wrapper {
+    padding-left: 280px;
+    transition: all 0.4s ease 0s;
+  }
+
+  #sidebar-wrapper {
+    margin-left: -250px;
+    left: 250px;
+    width: 250px;
+    background: #000;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: all 0.4s ease 0s;
+  }
+
+  #page-content-wrapper {
+    width: 100%;
+  }
+
+  .sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+
+    padding: 20px;
+  }
+@media (max-width:767px) {
+
+    #wrapper {
+      padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+      left: 0;
+    }
+
+    #wrapper.active {
+      position: relative;
+      left: 250px;
+    }
+
+    #wrapper.active #sidebar-wrapper {
+      left: 250px;
+      width: 250px;
+      transition: all 0.4s ease 0s;
+    }
+
+    a {
+      margin: 10px;
+    }
+
+}
+</style>
+
+
 </head>
 <body>
-	<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/posts">Blog</a>
-    </div>
+	<div class="row">
+      <div id="wrapper" class="toggle">
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="/posts">Index <span class="sr-only">(current)</span></a></li>
-        <li><a href="/posts/create">Create Post</a></li>
-        <li><a href="../portfolio">Portfolio</a></li>
-        <li><a href="../resume">Resume</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+          <div id="sidebar-wrapper">
+              <ul class="sidebar-nav">
+                  <li class="sidebar-brand">
+                      <a href="#">
+                          Blog
+                      </a>
+                
+              </ul>
+          </div>
+      </div> -->
+  <div class="row"
+      <div id="wrapper">
+      <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+              <li><a href="/posts">Blog</a></li>
+              <li><a href="/posts/create">Create Post</a></li>
+              <li><a href="../portfolio">Portfolio</a></li>
+              <li><a href="../resume">Resume</a></li>
+          </ul>
+      </div>
+      <div id="page-content-wrapper">
+          <div class="page-content">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-10">
+                          <!-- content of page -->
 
 	@yield('header')
 
