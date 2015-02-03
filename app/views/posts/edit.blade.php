@@ -1,19 +1,18 @@
 @extends('layouts.master')
 
-<!DOCTYPE html>
-<html lang="en">
+
 
 @section('header')
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio</title>
+    <title>Edit Post</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,18 +23,18 @@
   </head>
 @stop
 
-@section('content')	
-	    <body>
+@section('content')
+<body>
     
 <div class="container">
     <div class="row">
-        <h1>Portfolio</h1>
-        <ul>
-            <li>Thing 1</li>
-            <li>Thing 2</li>
-            <li>Thing 3</li>
-        </ul>
-        <a class="btn btn-default" href="{{{ action('HomeController@showResume') }}}">Resume</a>
+    	<h3>Create a Post</h3>
+        {{ Form::model($post, array('action' => array('PostsController@update', $post->id), 'method' => 'put')) }}
+        	@include ('posts.form')
+
+        	{{ Form::submit('Edit Post', array('class' => 'btn btn-primary')) }}
+        {{ Form::close() }}
+
     </div>
 </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -44,4 +43,5 @@
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
+
 @stop

@@ -40,7 +40,9 @@ Route::get('/rolldice/{guess}', function($guess) {
 Route::get('/whackamole', function() 
 {
 	return View::make('whackamole');
-})
+});
+
+Route::resource('posts', 'PostsController');
 
 Route::get('orm-test', function() {
 

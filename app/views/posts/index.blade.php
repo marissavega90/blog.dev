@@ -8,14 +8,16 @@
 
 </head>
 <body>
+<div class="container">
+	<h1>Index</h1>
+	@foreach($posts as $post)
+	<h1>{{ $post->title }}</h1>
+	<p>{{ $post->body }}</p>
+	<p id="entry">(entry #{{{ $post->id }}})</p>
+	@endforeach
 
-@foreach($posts as $post)
-<h1>{{ $post->title }}</h1>
-<p>{{ $post->body }}</p>
-<p id="entry">(entry #{{{ $post->id }}})</p>
-@endforeach
-
-{{ $posts->links() }}
+	{{ $posts->links() }}
+</div>
 	
 </body>
 </html>

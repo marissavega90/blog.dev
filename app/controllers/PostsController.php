@@ -48,6 +48,7 @@ class PostsController extends \BaseController {
 			$post->save();
 
 			return Redirect::action('PostsController@index');
+		}
 	}
 
 
@@ -73,7 +74,8 @@ class PostsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		return "Navigation to http://blog.dev/posts/{post}/edit Should show a form for editing a specific post";
+		$post = Post::findOrFail($id);
+		return View::make('posts.edit')->with('post', $post);
 	}
 
 
@@ -85,7 +87,12 @@ class PostsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$post = Post::findOrFail($id);
+		$post->title = Input::get('title');
+		$post->body  = Input::get('body');
+		$post->save();
+		
+		return Redirect::action('PostsController@index');
 	}
 
 
