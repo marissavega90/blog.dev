@@ -4,6 +4,13 @@
 
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
 
+	<style>
+
+	.greyOut {
+		color: #A0A0A0;
+	}
+	</style> 
+
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -24,7 +31,6 @@
       <ul class="nav navbar-nav">
         <li><a href="/posts">Index <span class="sr-only">(current)</span></a></li>
         <li><a href="/posts/create">Create Post</a></li>
-        <li><a href="/posts/1/edit">Edit Post</a></li>
         <li><a href="../portfolio">Portfolio</a></li>
         <li><a href="../resume">Resume</a></li>
       </ul>
