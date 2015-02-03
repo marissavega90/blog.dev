@@ -1,8 +1,6 @@
 <?php
 
-use Carbon\Carbon;
-
-class Post extends Eloquent {
+class Post extends BaseModel {
 
 	protected $table = 'posts';
 
@@ -12,10 +10,4 @@ class Post extends Eloquent {
 		'body'  => 'required'
 
 	];	
-
-	public function getCreatedAtAttribute($value) 
-	{
-		$utc = Carbon::createFromFormat($this->getDateFormat(), $value);
-	    return $utc->setTimezone('America/Chicago');
-	}
 }

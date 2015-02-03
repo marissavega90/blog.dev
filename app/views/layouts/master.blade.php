@@ -4,13 +4,6 @@
 
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
 
-	<style>
-
-	.greyOut {
-		color: #A0A0A0;
-	}
-	</style> 
-
 </head>
 <body>
 	<nav class="navbar navbar-default">
