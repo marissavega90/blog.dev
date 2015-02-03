@@ -80,22 +80,11 @@
         </nav>
 <div class="container">
     <div class="row">
-        <form action-"{{{ actiong('PostsController@store'}}}" method="post" class="form-control">
+    	<h3>Create a Post</h3>
         {{ Form::open(array('action' => 'PostsController@store', 'method' => 'put')) }}
-        	<div class="form-group {{{ $errors->has('title') ? 'has-error' : '' }}}">
-        	{{ Form::label('title', 'Post title', array('class' => 'form-control')) }}
-        	{{ Form::text('title', Input::old('title'))}}
-        	<label for="title" input=>Title:</label>
-        	<i<input id="title" name="title" class="form-control" rows="8" type="text" value="{{{ Input::old('title') }}}">
-        		{{ $errors->first('title', '<p class="help-block">:message</p>') }}
-        	</div>
-        	<div>
-				<label for="body">Body:</label>
-					<textarea class="form-control" rows="8" name="body" id="body">{{{ Input::old('body') }}}</textarea>
-						{{ $errors->first('body', '<p class="help-block">:message</p>') }}
-					</div> 
-        	<button class="button" type="submit">submit</button>
-        </form>
+        	@include ('posts.form')
+
+        	{{ Form::submit('Create Post' array('class' => 'btn btn-primary')) }}
         {{ Form::close }}
 
     </div>

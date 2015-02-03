@@ -9,7 +9,9 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		return "Navigation to http://blog.dev/posts/ Should show an index of all posts";
+		$posts = Post::paginate(4);
+		return View::make('posts.index')->with('posts', $posts);
+		// return "Navigation to http://blog.dev/posts/ Should show an index of all posts";
 	}
 
 
@@ -20,7 +22,8 @@ class PostsController extends \BaseController {
 	 */
 	public function create()
 	{
-		return "Navigation to http://blog.dev/posts/create Should show a form for creating a post";
+		return View::make('posts.create');
+		// return "Navigation to http://blog.dev/posts/create Should show a form for creating a post";
 	}
 
 
@@ -31,7 +34,20 @@ class PostsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$validator = Validator::make(Input::all(), Post::$rules);
+
+		if($validator->fails()) {
+
+			return Redirect::back()->withInput()->withErrors($validator);
+
+		} else {
+
+			$post = new Post();
+			$post->title = Input::get('title');
+			$post->body  = Input::get('body');
+			$post->save();
+
+			return Redirect::action('PostsController@index');
 	}
 
 
@@ -43,7 +59,9 @@ class PostsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		return "Navigation to http://blog.dev/posts/{post} Should show a specific post";
+		$post = Post::find($id);
+		return View::make('posts.show')->with('post', $post);
+		// return "Navigation to http://blog.dev/posts/{post} Should show a specific post";
 	}
 
 
