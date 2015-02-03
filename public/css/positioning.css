@@ -1,0 +1,120 @@
+
+.arrow {
+    position: relative;
+    float: right;
+    left: 45px;
+    bottom: 75px;
+
+}
+
+.ribbon {
+    position: relative;
+    float: right;
+    bottom: 22px;
+    left: 10px;
+}
+
+#container {
+    height: 300px;
+    width: 500px;
+    position: relative;
+}
+
+#box1 {
+    border: 1px solid;
+    border-color: black;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    margin: 50px;
+    margin-top: 25px;
+    margin-left: 5px;
+    float: left;
+}
+
+#box2 {
+    border: 1px solid;
+    border-color: black;
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    margin: 50px;
+    margin-top: 25px;
+    margin-left: 5px;
+    float: left;
+
+}
+
+#box3 {
+    border: 1px solid;
+    border-color: black;
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    margin: 50px;
+    margin-top: 25px;
+    margin-left: 5px;
+    float: left;
+
+}
+
+#box4 {
+    border: 1px solid;
+    border-color: black;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    margin: 50px;
+    margin-top: 25px;
+    margin-left: 5px;
+    float: left;
+
+}
+
+#box5 {
+    border: 1px solid;
+    border-color: black;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    margin: 50px;
+    margin-top: 25px;
+    margin-left: 5px;
+    float: left;
+}
+
+#box6 {
+    border: 1px solid;
+    border-color: black;
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    margin: 50px;
+    margin-top: 25px;
+    margin-left: 5px;
+    float: left;
+}

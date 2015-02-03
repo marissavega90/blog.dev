@@ -58,6 +58,7 @@ Route::get('orm-test', function() {
 
 });
 
+Route::get('parks', 'HomeController@showParks');
 
 
 

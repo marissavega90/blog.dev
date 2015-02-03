@@ -29,4 +29,10 @@ class HomeController extends BaseController {
 	{
 		return View::make('portfolio');
 	}
+
+	public function showParks()
+	{
+		return View::make('parks');
+	}
+
 }

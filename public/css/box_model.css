@@ -1,0 +1,83 @@
+
+#box1 {
+    border: 1px solid;
+    border-color: black;
+    width: 150px;
+    height: 50px;
+    background-color: red;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#box2 {
+    border: 1px solid;
+    border-color: black;
+    width: 150px;
+    height: 50px;
+    background-color: orange;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 40px;
+}
+
+#box3 {
+    border: 1px solid;
+    border-color: black;
+    width: 150px;
+    height: 50px;
+    background-color: yellow;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 70px;
+}
+
+#box4 {
+    border: 1px solid;
+    border-color: black;
+    width: 150px;
+    height: 50px;
+    background-color: green;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 100px;
+}
+
+#box5 {
+    border: 1px solid;
+    border-color: black;
+    width: 150px;
+    height: 50px;
+    background-color: blue;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 130px;
+}
+
+#box6 {
+    border: 1px solid;
+    border-color: black;
+    width: 150px;
+    height: 50px;
+    background-color: violet;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 160px;
+}

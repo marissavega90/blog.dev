@@ -98,11 +98,13 @@ class PostsController extends \BaseController {
 		$validator = Validator::make(Input::all(), Post::$rules);
 
 		if($validator->fails()) {
+			Session::flash('errorMessage', 'Failed to save your post!');
 
 			return Redirect::back()->withInput()->withErrors($validator);
 
 		} else {
 		
+			Session::flash('successMessage', 'Post saved!');
 			$post->title = Input::get('title');
 			$post->body  = Input::get('body');
 			$post->save();

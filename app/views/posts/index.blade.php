@@ -1,41 +1,22 @@
 @extends ('layouts.master')
 
-@section ('header')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Index</title>
-
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-</head>
-@stop
 
 @section ('content')
 <body>
 <div class="container">
-	<h1>Index</h1>
-	@foreach($posts as $post)
-	<h1>{{ $post->title }}</h1>
-	<p>{{ $post->body }}</p>
-	<p id="entry">(entry #{{{ $post->id }}})</p>
-	@endforeach
+	<article>
+		<h1>Index</h1>
+		@foreach($posts as $post)
+			<h1>{{ $post->title }}</h1>
 
-	{{ $posts->links() }}
+				<p>{{ $post->body }}</p>
+
+				<a href="{{{ action('PostsController@show', $post->id) }}}">Read More</a>
+	</article>
+@endforeach
+</div>
+<div class="container">
+{{ $posts->links() }}
 </div>
 	
 </body>
