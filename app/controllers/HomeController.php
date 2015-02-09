@@ -35,4 +35,34 @@ class HomeController extends BaseController {
 		return View::make('parks');
 	}
 
+	public function showLogin() {
+
+		return View::make('login');
+	}
+
+
+	public function doLogin() {
+
+		$email    = Input::get('email');
+		$password = Input::get('password');
+
+		if (Auth::attempt(array('email' => $email, 'password' => $password))) {
+
+			Session::flash('successMessage', "Login successful");
+    		return Redirect::intended('/');
+
+		} else {
+
+			Session::flash('errorMessage', "Login failed, please re-enter login and password.");
+    		return Redirect::action('PostsController@index');
+		};
+	}
+
+	public function doLogout() {
+
+		Auth::logout();
+		Session::flash('successMessage', "Goodbye!");
+		return Redirect::action('PostsController@index');
+	}
+
 }
