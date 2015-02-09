@@ -60,5 +60,11 @@ Route::get('orm-test', function() {
 
 Route::get('parks', 'HomeController@showParks');
 
+Route::get('login', 'HomeController@showLogin');
+
+Route::post('login', 'HomeController@doLogin');
+
+Route::get('logout', 'HomeController@doLogout');
+
 
 
